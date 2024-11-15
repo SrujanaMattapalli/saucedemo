@@ -1,5 +1,5 @@
-Feature: Sauce Demo Automation using Selenium cucumber java
-
+Featcmure: Sauce Demo Automation using Selenium cucumber java
+@MercatorTest
   Scenario: Login and add highest priced item to cart
     Given user navigates to SauceDemo login page
     When user enters username and password

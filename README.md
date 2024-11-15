@@ -15,6 +15,9 @@ This is an automated testing framework for SauceDemo website using Selenium WebD
 - Maven
 - Chrome browser
 - ChromeDriver
-- IDE (Eclipse/IntelliJ)
+- IDE (Ec[sauceDemo.feature](src/test/resources/features/sauceDemo.feature)lipse/IntelliJ)
 
-## Project Structure
+## Project execution
+mvn clean test - To clean and run the test
+
+mvn test -Dcucumber.options="--tags @yourTag" - To run using Tag
