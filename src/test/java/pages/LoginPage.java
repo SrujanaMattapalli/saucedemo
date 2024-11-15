@@ -1,6 +1,7 @@
 // src/test/java/pages/LoginPage.java
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,5 +25,9 @@ public class LoginPage extends BasePage {
 		usernameField.sendKeys(username);
 		passwordField.sendKeys(password);
 		loginButton.click();
+	}
+
+	public boolean isLoginPageDisplayed() {
+		return driver.findElement(By.id("login-button")).isDisplayed();
 	}
 }

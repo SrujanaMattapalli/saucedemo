@@ -1,6 +1,7 @@
 // src/test/java/pages/InventoryPage.java
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,6 +32,9 @@ public class ProductPage extends BasePage {
                 highestPrice = currentPrice;
                 selectedItem = inventoryItems.get(i);
             }
+            if(i==itemPrices.size()-1){
+                System.out.println("Highest price item" +selectedItem.getText());
+            }
         }
     }
 
@@ -41,5 +45,13 @@ public class ProductPage extends BasePage {
             waitForElementToBeClickable(addToCartButton);
             addToCartButton.click();
         }
+    }
+
+    public boolean isProductPageDisplayed() {
+        return driver.findElement(By.className("inventory_list")).isDisplayed();
+    }
+
+    public boolean isAddToCartConfirmationDisplayed() {
+        return driver.findElement(By.xpath("//button[text()='Remove']")).isDisplayed();
     }
 }

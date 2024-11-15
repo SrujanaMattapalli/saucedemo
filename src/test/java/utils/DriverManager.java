@@ -15,7 +15,7 @@ public class DriverManager {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         // Initialize ChromeDriver
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         return driver;
     }
