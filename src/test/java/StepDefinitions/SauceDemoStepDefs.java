@@ -57,6 +57,7 @@ public class SauceDemoStepDefs {
     }
 
     @After
+
     public void tearDown() {
         if (driver != null) {
             driver.quit();
